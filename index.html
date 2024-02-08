@@ -1,0 +1,163 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Product Page</title>
+        <style>
+            
+            body 
+            
+            {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            .container {
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 20px;
+            }
+
+            h1 {
+                text-align: center;
+            }
+
+            .product {
+                display: flex;
+                margin-top: 20px;
+            }
+
+            .product-image img {
+                width: 100%;
+                max-width: 600px; 
+                height: auto;
+                border: 1px solid #ddd;
+                padding: 10px;
+            }
+
+            .product-info {
+                padding: 20px;
+                flex: 1;
+                background-color: #f9f9f9;
+                border: 1px solid #ddd;
+                border-left: none;
+            }
+
+            .vendor, .title, .price, .compare-price, .percentage-off {
+                margin-bottom: 10px;
+            }
+
+
+            .thumbnails::before {
+                content: ''; 
+                flex: 1; 
+                margin: 0 5px; 
+                height: 1px; 
+                 
+            }
+
+            label {
+                display: block;
+                margin-bottom: 5px;
+            }
+
+            select, input, button {
+                margin-bottom: 10px;
+                padding: 8px;
+            }
+
+            button {
+                background-color: #3498db;
+                color: #fff;
+                cursor: pointer;
+                border: none;
+                border-radius: 5px;
+            }
+
+            .description::before {
+                content: "Navy blue and off-white checked opaque Casual shirt, has a spread collar, button placket, 1 patch pocket, long regular sleeves, curved. ";
+                font-style: italic;
+                color: #333; 
+            }
+
+        </style>
+    </head>
+    <body>
+
+    <div class="container">
+        <h1>Product Details</h1>
+
+        <div class="product">
+            <div class="product-image">
+                <img src="Product.jpg" alt="Product Image" class="large-image">
+            <div class="thumbnails">
+    <img src="Product 1.jpg" alt="Thumbnail 1" class="thumbnail" onclick="changeImage('thumbnail1.jpg')">
+    <img src="Product 2.jpg" alt="Thumbnail 2" class="thumbnail" onclick="changeImage('thumbnail2.jpg')">
+    <img src="Product 3.jpg" alt="Thumbnail 3" class="thumbnail" onclick="changeImage('thumbnail3.jpg')">
+    <style>
+        .thumbnails {
+            display: flex;
+            margin-top: 1px; 
+        }
+
+        .thumbnail {
+            width: 1px;
+            height: 1px;
+            margin-right: 10px; 
+            cursor: pointer;
+        }
+
+        .thumbnail:hover {
+            border: 2px solid #3498db; 
+        }
+    </style>
+</div>
+            </div>
+            <div class="product-info">
+            
+                <p class="vendor">Marmeto</p> 
+            
+                <h2 class="title">Seashore T-Shirt</h2>
+
+                <p class="price">Price: $12999.00</p>
+
+                <p class="compare-price">Compare at Price: <strike>$17779.00</strike></p>
+
+                <label for="color">Choose a Color:</label>
+                <select id="color" name="color">
+                    
+                    <option value="black">Black</option>
+                    <option value="brown">Brown</option>
+            
+                </select>
+
+                <label for="size">Choose a Size:</label>
+                <select id="size" name="size">
+                   
+                    <option value="small">Small</option>
+                    <option value="medium">Medium</option>
+                    <option value="large">Large</option>
+                    <option value="extra-large">Extra Large</option>
+                    <option value="xxl">XXL</option>
+                    
+                </select>
+
+            
+                <label for="quantity">Quantity:</label>
+                <input type="number" id="quantity" name="quantity" value="1" min="1">
+                <button onclick="addToCart()">Add To Cart</button>
+            
+                <div class="description">
+                    <h3>Description:</h3>
+                    <p>A garment with a collar, sleeves with cuffs, and a full vertical opening with buttons or snaps...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    </body>
+    </html>

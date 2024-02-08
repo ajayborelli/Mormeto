@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <!-- Include your CSS file for the shopping cart page -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f4f4f4;
+        }
+
+        .cart-container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .cart-item {
+            display: flex;
+            border-bottom: 1px solid #eee;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        .cart-item img {
+            max-width: 100px;
+            margin-right: 10px;
+        }
+
+        .item-details {
+            flex: 1;
+        }
+
+        .item-details h3 {
+            margin: 0;
+            color: #333;
+        }
+
+        .item-details p {
+            margin: 5px 0;
+            color: #777;
+        }
+
+        .cart-total {
+            text-align: right;
+            margin-top: 20px;
+        }
+
+        .cart-total p {
+            margin: 5px 0;
+            font-size: 18px;
+            color: #333;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+
+<div class="cart-container">
+    <h1>Shopping Cart</h1>
+
+    <!-- Placeholder content for the shopping cart -->
+    <div class="cart-item">
+        <img src="Product.jpg" alt="Product 1">
+        <div class="item-details">
+            <h3>Product 1</h3>
+            <p>Price: $1779/-</p>
+            <p>Quantity: 1</p>
+        </div>
+    </div>
+
+    <!-- Total and checkout button -->
+    <div class="cart-total">
+        <p>Total: $1779/-</p>
+        <button onclick="proceedToCheckout()">Proceed to Checkout</button>
+    </div>
+</div>
+
+<!-- JavaScript file for cart functionality -->
+<script src="cart-script.js"></script>
+
+</body>
+</html>
